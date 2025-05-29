@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.leftSide {
+    padding-left: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.leftSide img {
+    width: 100px;
+}
+
+.rightSide {
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+/* --- Desktop Navigation --- */
+.desktopLinks {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.desktopLinks a,
+.desktopLinks button {
+    color: white;
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
+.desktopLinks button {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: white !important;
+    background: none !important;
+    border: none !important;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 15px;
+}
+
+
+.desktopLinks button:hover,
+.desktopLinks a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* --- Mobile Menu Button (Hamburger) --- */
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* --- Mobile Dropdown --- */
+.mobileDropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    width: 180px;
+    background-color: #000;
+    z-index: 99;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.mobileDropdown a,
+.mobileDropdown button {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.mobileDropdown a:hover,
+.mobileDropdown button:hover {
+    background-color: #111;
+}
+
+/* --- Responsive Behavior --- */
+@media only screen and (max-width: 768px) {
+    .desktopLinks {
+        display: none;
+    }
+
+    .menuToggle {
+        display: block;
+    }
+
+    .leftSide {
+        padding-left: 20px;
+    }
+
+    .rightSide {
+        padding-right: 20px;
+    }
+}

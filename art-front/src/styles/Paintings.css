@@ -1,0 +1,133 @@
+body {
+    background-color: #fcf5ff;
+}
+
+.paintings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.paintings-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    color: #754a83;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.paintings-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    margin-bottom: 20px;
+}
+
+.paintings-filter, .paintings-sort {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #3e084a;
+}
+
+.paintings-sort select {
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* 🔥 Pinterest-style Masonry Grid */
+.paintings-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 60vw;
+    justify-content: center;
+}
+
+/* Individual Painting Item */
+.painting-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Image Styling */
+.painting-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4; /* Ensuring 30x40 ratio */
+    object-fit: cover;
+    border-radius: 10px;
+}
+.favorite-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    background-color: #90679c;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+/* Text Styling */
+.painting-item h1,
+.painting-item h2,
+.painting-item p {
+    margin: 5px 0;
+    color: #3e084a;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 800px) {
+    .paintings-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 800px) {
+    .paintings-title {
+        font-size: 40px;
+    }
+
+    .paintings-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .paintings-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paintings-filter,
+    .paintings-sort {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .paintings-title {
+        font-size: 32px;
+    }
+
+    .paintings-list {
+        grid-template-columns: 1fr;
+    }
+
+    .paintings-sort select {
+        width: 100%;
+    }
+}
