@@ -1,0 +1,82 @@
+
+
+.favorites-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fcf5ff;
+}
+
+.favorites-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    color: #754a83;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Favorites */
+.paintings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 60vw;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Individual Favorite Painting */
+.painting-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.painting-box img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Text Styling */
+.painting-box h3,
+.painting-box p {
+    margin: 5px 0;
+    color: #3e084a;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive */
+@media only screen and (max-width: 800px) {
+    .paintings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .favorites-title {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+
+    .paintings-grid {
+        grid-template-columns: 1fr;
+        width: 95vw;
+    }
+
+    .painting-box {
+        padding: 8px;
+    }
+
+    .painting-box h3,
+    .painting-box p {
+        font-size: 14px;
+    }
+}

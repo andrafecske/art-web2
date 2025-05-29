@@ -1,0 +1,202 @@
+body {
+    background-color: #f7e6fb;
+}
+
+
+.painting-details-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.painting-section {
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.painting-section img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.painting-section h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.painting-section p {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.comments-section {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.comments-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-form textarea {
+    resize: vertical;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.comment-form button {
+    align-self: flex-start;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #3e084a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.comment-form button:hover {
+    background-color: #9d79c1;
+}
+
+.comment-delete-button {
+    background-color: #a157a5;        /* A nice red for delete */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 8px;
+    align-self: flex-start;
+}
+
+.comment-delete-button:hover {
+    background-color: #3e084a;        /* lighter red on hover */
+}
+
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.comment-item::before {
+    content: "💬";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 18px;
+    background-color: #90679c;
+    color: white;
+    padding: 4px 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.comment-item strong {
+    font-size: 16px;
+    color: #3e084a;
+    font-weight: 600;
+}
+
+.comment-item p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.comment-item small {
+    font-size: 13px;
+    color: #999;
+    align-self: flex-end;
+    font-style: italic;
+}
+
+.comment-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsive layout for painting details */
+@media only screen and (max-width: 768px) {
+    .painting-details-container {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 30px;
+    }
+
+    .painting-section,
+    .comments-section {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .painting-section h1 {
+        font-size: 22px;
+    }
+
+    .painting-section p,
+    .comment-item p {
+        font-size: 14px;
+    }
+
+    .comments-section h2 {
+        font-size: 20px;
+    }
+
+    .comment-form textarea {
+        font-size: 14px;
+    }
+
+    .comment-form button,
+    .comment-delete-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
