@@ -192,7 +192,7 @@ const insertPainting = async (painting) => {
     const { name, image, dimension, price } = painting;
 
     // Form the image URL
-    const image_url = `/paintings/${image}`;
+    const image_url =`https://raw.githubusercontent.com/andrafecske/art-web2/master/art-server/assets/paintings/${image}`;
 
     // Check if the painting already exists in the database
     const checkPaintingQuery = "SELECT * FROM paintings WHERE name = $1 OR image_url = $2";

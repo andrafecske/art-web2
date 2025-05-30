@@ -1,3 +1,6 @@
+body {
+    background-color: #f7e6fb;
+}
 
 
 .favorites-page {
@@ -6,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #fcf5ff;
+
 }
 
 .favorites-title {
